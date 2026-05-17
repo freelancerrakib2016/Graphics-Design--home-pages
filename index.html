@@ -1,9 +1,9 @@
-```html
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Graphics Design Courses</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -19,30 +19,25 @@
 
     body{
       background:#f4f7fb;
-      color:#111827;
       overflow-x:hidden;
     }
-
-    /* ================= NAVBAR ================= */
 
     nav{
       width:100%;
       background:#0f172a;
-      padding:18px 7%;
+      padding:18px 5%;
       display:flex;
       justify-content:space-between;
       align-items:center;
       position:sticky;
       top:0;
       z-index:1000;
-      box-shadow:0 5px 20px rgba(0,0,0,0.15);
     }
 
     .logo{
       color:#fff;
       font-size:30px;
       font-weight:800;
-      letter-spacing:1px;
     }
 
     .logo span{
@@ -52,78 +47,58 @@
     .menu{
       display:flex;
       gap:35px;
-      align-items:center;
-      flex-wrap:wrap;
     }
 
     .menu a{
       text-decoration:none;
       color:#fff;
-      font-size:16px;
-      font-weight:500;
-      position:relative;
       transition:0.3s;
-    }
-
-    .menu a::after{
-      content:'';
-      width:0%;
-      height:2px;
-      background:#38bdf8;
-      position:absolute;
-      left:0;
-      bottom:-6px;
-      transition:0.4s;
-    }
-
-    .menu a:hover::after{
-      width:100%;
     }
 
     .menu a:hover{
       color:#38bdf8;
     }
 
-    /* ================= COURSES ================= */
-
     .courses{
-      width:100%;
-      padding:100px 7%;
-      min-height:80vh;
+      padding:90px 5%;
     }
 
     .section-title{
       text-align:center;
-      margin-bottom:70px;
+      margin-bottom:60px;
     }
 
     .section-title h2{
-      font-size:50px;
+      font-size:48px;
+      margin-bottom:15px;
       color:#0f172a;
-      margin-bottom:18px;
-      font-weight:800;
     }
 
     .section-title p{
       color:#64748b;
       font-size:17px;
-      line-height:1.8;
+    }
+
+    .course-wrapper{
+      width:100%;
     }
 
     .course-container{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      grid-template-columns:repeat(3,1fr);
       gap:35px;
+      justify-items:center;
     }
 
     .course-box{
       background:#fff;
-      padding:45px 35px;
+      width:100%;
+      max-width:340px;
+      padding:40px 30px;
       border-radius:25px;
       box-shadow:0 15px 40px rgba(0,0,0,0.08);
-      transition:0.5s;
+      transition:0.4s;
       position:relative;
-      overflow:hidden;
     }
 
     .course-box::before{
@@ -134,54 +109,50 @@
       width:100%;
       height:6px;
       background:#38bdf8;
+      border-radius:20px 20px 0 0;
     }
 
     .course-box:hover{
-      transform:translateY(-12px);
-      box-shadow:0 20px 50px rgba(0,0,0,0.15);
+      transform:translateY(-10px);
+      box-shadow:0 20px 50px rgba(0,0,0,0.12);
     }
 
     .course-box img{
-      width:95px;
-      margin-bottom:25px;
+      width:90px;
+      margin-bottom:20px;
     }
 
     .course-box h3{
-      font-size:30px;
-      margin-bottom:18px;
+      font-size:28px;
+      margin-bottom:15px;
       color:#0f172a;
     }
 
     .course-box p{
       color:#64748b;
-      line-height:1.9;
-      font-size:15px;
-      margin-bottom:30px;
+      line-height:1.8;
+      margin-bottom:25px;
     }
 
     .course-box a{
       display:inline-block;
-      text-decoration:none;
       background:#0f172a;
       color:#fff;
-      padding:13px 30px;
-      border-radius:12px;
-      font-size:15px;
-      font-weight:600;
-      transition:0.4s;
+      text-decoration:none;
+      padding:12px 25px;
+      border-radius:10px;
+      transition:0.3s;
     }
 
     .course-box a:hover{
       background:#38bdf8;
     }
 
-    /* ================= FOOTER ================= */
-
     footer{
       background:#020617;
-      padding:50px 7% 20px;
       color:#fff;
-      margin-top:40px;
+      padding:50px 5% 20px;
+      margin-top:70px;
     }
 
     .footer-top{
@@ -193,55 +164,45 @@
 
     .footer-links h3,
     .footer-contact h3{
-      font-size:22px;
       margin-bottom:20px;
-      color:#fff;
+      font-size:24px;
     }
 
     .footer-links ul{
       list-style:none;
     }
 
-    .footer-links ul li{
-      margin-bottom:14px;
+    .footer-links li{
+      margin-bottom:12px;
     }
 
-    .footer-links ul li a{
+    .footer-links a{
       text-decoration:none;
       color:#94a3b8;
       transition:0.3s;
-      font-size:15px;
     }
 
-    .footer-links ul li a:hover{
+    .footer-links a:hover{
       color:#38bdf8;
-      padding-left:5px;
     }
 
     .footer-contact p{
       color:#94a3b8;
-      line-height:1.9;
-      margin-bottom:12px;
-      font-size:15px;
+      margin-bottom:10px;
+      line-height:1.7;
     }
 
     .footer-bottom{
-      border-top:1px solid rgba(255,255,255,0.08);
-      padding-top:18px;
+      border-top:1px solid rgba(255,255,255,0.1);
+      padding-top:15px;
       text-align:center;
-    }
-
-    .footer-bottom p{
       color:#64748b;
-      font-size:14px;
     }
-
-    /* ================= MOBILE ================= */
 
     @media(max-width:1100px){
 
-      .footer-top{
-        grid-template-columns:1fr 1fr;
+      .course-container{
+        grid-template-columns:repeat(2,1fr);
       }
 
     }
@@ -250,52 +211,32 @@
 
       nav{
         flex-direction:column;
-        gap:20px;
-        padding:20px;
+        gap:15px;
       }
 
       .menu{
-        gap:18px;
+        flex-wrap:wrap;
         justify-content:center;
-      }
-
-      .courses{
-        padding:80px 20px;
       }
 
       .section-title h2{
         font-size:36px;
       }
 
-      .section-title p{
-        font-size:15px;
-      }
-
-      .course-box{
-        padding:35px 25px;
-      }
-
-      footer{
-        padding:45px 20px 18px;
+      .course-container{
+        grid-template-columns:1fr;
       }
 
       .footer-top{
         grid-template-columns:1fr;
-        gap:30px;
-      }
-
-      .logo{
-        font-size:24px;
-        text-align:center;
       }
 
     }
 
   </style>
 </head>
-<body>
 
-  <!-- NAVBAR -->
+<body>
 
   <nav>
 
@@ -312,72 +253,78 @@
 
   </nav>
 
-  <!-- COURSES SECTION -->
-
   <section class="courses">
 
     <div class="section-title">
       <h2>Our Premium Courses</h2>
-
       <p>
         Choose your favorite graphics design course and start learning professionally.
       </p>
     </div>
 
-    <div class="course-container">
+    <div class="course-wrapper">
 
-      <!-- Illustrator -->
+      <div class="course-container">
 
-      <div class="course-box">
+        <div class="course-box">
+          <img src="https://cdn-icons-png.flaticon.com/512/5968/5968472.png">
+          <h3>Adobe Illustrator</h3>
+          <p>Learn vector design and branding professionally.</p>
+          <a href="#">Start Course</a>
+        </div>
 
-        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968472.png">
+        <div class="course-box">
+          <img src="https://cdn-icons-png.flaticon.com/512/5968/5968520.png">
+          <h3>Adobe Photoshop</h3>
+          <p>Learn professional photo editing and retouching.</p>
+          <a href="#">Start Course</a>
+        </div>
 
-        <h3>Adobe Illustrator</h3>
+        <div class="course-box">
+          <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+          <h3>Logo Design</h3>
+          <p>Learn modern logo and branding techniques.</p>
+          <a href="#">Start Course</a>
+        </div>
 
-        <p>
-          Learn vector design, typography, branding, business cards,
-          social media design and advanced illustrator techniques professionally.
-        </p>
+        <div class="course-box">
+          <img src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png">
+          <h3>Typography</h3>
+          <p>Creative typography and font pairing course.</p>
+          <a href="#">Start Course</a>
+        </div>
 
-        <a href="https://freelancerrakib2016.github.io/Graphics-Design--Adobe-illustrator-course/" target="_blank">
-          Start Course
-        </a>
+        <div class="course-box">
+          <img src="https://cdn-icons-png.flaticon.com/512/2920/2920277.png">
+          <h3>Flyer Design</h3>
+          <p>Professional flyer and marketing material design.</p>
+          <a href="#">Start Course</a>
+        </div>
 
-      </div>
+        <div class="course-box">
+          <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png">
+          <h3>Banner Design</h3>
+          <p>Learn web banners and social media banner design.</p>
+          <a href="#">Start Course</a>
+        </div>
 
-      <!-- Photoshop -->
+        <div class="course-box">
+          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png">
+          <h3>YouTube Thumbnail</h3>
+          <p>Create eye-catching thumbnails professionally.</p>
+          <a href="#">Start Course</a>
+        </div>
 
-      <div class="course-box">
+        <div class="course-box">
+          <img src="https://cdn-icons-png.flaticon.com/512/3163/3163458.png">
+          <h3>Color Theory</h3>
+          <p>Learn color psychology and harmony professionally.</p>
 
-        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968520.png">
-
-        <h3>Adobe Photoshop</h3>
-
-        <p>
-          Learn photo editing, manipulation, retouching, thumbnails,
-          banners and advanced photoshop editing step by step.
-        </p>
-
-        <a href="https://freelancerrakib2016.github.io/Graphics-Design--Adobe-illustrator-course/" target="_blank">
-          Start Course
-        </a>
-
-      </div>
-
-      <!-- Logo Design -->
-
-      <div class="course-box">
-
-        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
-
-        <h3>Logo Design</h3>
-
-        <p>
-          Learn modern logo design, minimalist branding,
-          creative concepts and premium logo presentation techniques.
-        </p>
-
-        <a href="#">Start Course</a>
+          <!-- NEW TAB LINK -->
+          <a href="https://freelancerrakib2016.github.io/colorpages-/" target="_blank">
+            Start Course
+          </a>
+        </div>
 
       </div>
 
@@ -385,16 +332,11 @@
 
   </section>
 
-  <!-- FOOTER -->
-
   <footer>
 
     <div class="footer-top">
 
-      <!-- QUICK LINKS -->
-
       <div class="footer-links">
-
         <h3>Quick Links</h3>
 
         <ul>
@@ -403,13 +345,9 @@
           <li><a href="#">About Us</a></li>
           <li><a href="#">Contact Us</a></li>
         </ul>
-
       </div>
 
-      <!-- COURSES -->
-
       <div class="footer-links">
-
         <h3>Courses</h3>
 
         <ul>
@@ -418,31 +356,20 @@
           <li><a href="#">Logo Design</a></li>
           <li><a href="#">Freelancing</a></li>
         </ul>
-
       </div>
 
-      <!-- CONTACT -->
-
       <div class="footer-contact">
-
         <h3>Contact Info</h3>
 
         <p>Email: freelancerrakib@gmail.com</p>
-
         <p>Location: Saudi Arabia</p>
-
         <p>Available For Freelancing Projects</p>
-
       </div>
 
     </div>
 
     <div class="footer-bottom">
-
-      <p>
-        © 2026 All Rights Reserved
-      </p>
-
+      <p>© 2026 All Rights Reserved | Freelancer-Rakib-Hasan</p>
     </div>
 
   </footer>
@@ -450,3 +377,4 @@
 </body>
 </html>
 ```
+
