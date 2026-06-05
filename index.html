@@ -1,442 +1,363 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>freelancer-rakib-hasan</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Graphics Design Courses</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<style>
-:root{
-  --bg:#0b0f1a;
-  --card:#111827;
-  --text:#ffffff;
-  --muted:#a1a1aa;
-  --accent:#7c3aed;
-  --accent2:#22d3ee;
-}
+  <style>
 
-body.light{
-  --bg:#f4f7ff;
-  --card:#ffffff;
-  --text:#0f172a;
-  --muted:#475569;
-}
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Inter',sans-serif;
-}
+    body{
+      background:#f4f7fb;
+      overflow-x:hidden;
+    }
 
-body{
-  background:var(--bg);
-  color:var(--text);
-  transition:0.4s;
-}
+    /* NAV */
+    nav{
+      width:100%;
+      background:#0f172a;
+      padding:18px 5%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      flex-wrap:wrap;
+    }
 
-/* HEADER */
-header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:16px 50px;
-  position:sticky;
-  top:0;
-  background:rgba(0,0,0,0.35);
-  backdrop-filter:blur(15px);
-}
+    .logo{
+      color:#fff;
+      font-size:28px;
+      font-weight:800;
+    }
 
-body.light header{
-  background:rgba(255,255,255,0.8);
-}
+    .logo span{
+      color:#38bdf8;
+    }
 
-.brand{
-  font-weight:700;
-  font-size:18px;
-}
+    .menu{
+      display:flex;
+      gap:25px;
+      flex-wrap:wrap;
+    }
 
-nav{
-  display:flex;
-  gap:18px;
-  margin-left:auto;
-  margin-right:40px;
-}
+    .menu a{
+      text-decoration:none;
+      color:#fff;
+      font-size:15px;
+      transition:0.3s;
+    }
 
-nav a{
-  text-decoration:none;
-  color:var(--text);
-  font-weight:500;
-}
+    .menu a:hover{
+      color:#38bdf8;
+    }
 
-.toggle{
-  border:1px solid #ccc;
-  padding:6px 12px;
-  border-radius:8px;
-  cursor:pointer;
-}
+    /* SECTION */
+    .courses{
+      padding:90px 5%;
+    }
 
-/* HERO */
-.hero{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:80px 60px;
-  gap:40px;
-}
+    .section-title{
+      text-align:center;
+      margin-bottom:60px;
+    }
 
-.hero-left{
-  max-width:550px;
-}
+    .section-title h2{
+      font-size:44px;
+      color:#0f172a;
+      margin-bottom:10px;
+    }
 
-.hero-left h1{
-  font-size:52px;
-  line-height:1.25;
-  background:linear-gradient(90deg,#fff,var(--accent),var(--accent2));
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
+    .section-title p{
+      color:#64748b;
+    }
 
-.hero-left p{
-  margin-top:15px;
-  color:var(--muted);
-  line-height:1.6;
-}
+    /* GRID */
+    .course-container{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:30px;
+      justify-items:center;
+    }
 
-.btn{
-  display:inline-block;
-  margin-top:20px;
-  padding:12px 20px;
-  border-radius:10px;
-  background:linear-gradient(90deg,var(--accent),var(--accent2));
-  color:white;
-  text-decoration:none;
-  font-weight:600;
-}
+    .course-box{
+      background:#fff;
+      width:100%;
+      max-width:340px;
+      padding:35px 25px;
+      border-radius:20px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.08);
+      transition:0.3s;
+      position:relative;
+    }
 
-/* COUNTER */
-.counter-box{
-  margin-top:20px;
-  padding:15px;
-  border-radius:12px;
-  background:rgba(255,255,255,0.05);
-  border:1px solid rgba(255,255,255,0.1);
-  display:inline-block;
-}
+    .course-box::before{
+      content:'';
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:5px;
+      background:#38bdf8;
+      border-radius:20px 20px 0 0;
+    }
 
-.counter{
-  font-size:28px;
-  font-weight:800;
-  color:var(--accent2);
-}
+    .course-box:hover{
+      transform:translateY(-8px);
+    }
 
-/* HERO RIGHT */
-.hero-right{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:15px;
-}
+    .course-box img{
+      width:80px;
+      margin-bottom:15px;
+    }
 
-.flip-card{
-  width:150px;
-  height:110px;
-  position:relative;
-}
+    .course-box h3{
+      font-size:24px;
+      margin-bottom:10px;
+    }
 
-.flip-inner{
-  position:absolute;
-  width:100%;
-  height:100%;
-  transition:0.7s;
-  transform-style:preserve-3d;
-}
+    .course-box p{
+      font-size:14px;
+      color:#64748b;
+      margin-bottom:20px;
+    }
 
-.flip-card:hover .flip-inner{
-  transform:rotateY(180deg);
-}
+    .course-box a{
+      display:inline-block;
+      padding:10px 18px;
+      background:#0f172a;
+      color:#fff;
+      text-decoration:none;
+      border-radius:8px;
+    }
 
-.flip-front, .flip-back{
-  position:absolute;
-  width:100%;
-  height:100%;
-  backface-visibility:hidden;
-  border-radius:14px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  flex-direction:column;
-  border:1px solid rgba(255,255,255,0.1);
-  background:var(--card);
-}
+    .course-box a:hover{
+      background:#38bdf8;
+    }
 
-.flip-back{
-  transform:rotateY(180deg);
-  color:var(--muted);
-  font-size:12px;
-}
+    /* FOOTER */
+    footer{
+      background:#020617;
+      color:#fff;
+      padding:50px 5% 20px;
+      margin-top:70px;
+    }
 
-/* COURSES */
-.courses{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:30px;
-  padding:60px;
-}
+    .footer-top{
+      display:grid;
+      grid-template-columns:1fr 1fr 1fr;
+      gap:30px;
+    }
 
-.card{
-  background:var(--card);
-  padding:30px;
-  border-radius:18px;
-  border:1px solid rgba(255,255,255,0.08);
-  transition:0.3s;
-}
+    .footer-links h3,
+    .footer-contact h3{
+      margin-bottom:15px;
+    }
 
-.card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 10px 30px rgba(0,0,0,0.3);
-}
+    .footer-links ul{
+      list-style:none;
+    }
 
-.badge{
-  display:inline-block;
-  padding:5px 12px;
-  border-radius:20px;
-  background:linear-gradient(90deg,var(--accent),var(--accent2));
-  font-size:12px;
-  margin-bottom:10px;
-}
+    .footer-links a{
+      text-decoration:none;
+      color:#94a3b8;
+    }
 
-.card h2{
-  margin-top:10px;
-}
+    .footer-links a:hover{
+      color:#38bdf8;
+    }
 
-.card p{
-  margin-top:8px;
-  color:var(--muted);
-}
+    .footer-contact p{
+      color:#94a3b8;
+      margin-bottom:8px;
+    }
 
-.price{
-  margin-top:15px;
-  font-size:26px;
-  font-weight:800;
-  color:var(--accent2);
-}
+    .footer-bottom{
+      text-align:center;
+      margin-top:20px;
+      padding-top:15px;
+      border-top:1px solid rgba(255,255,255,0.1);
+      color:#64748b;
+    }
 
-/* FOOTER */
-footer{
-  background:#0a0f1c;
-  padding:70px 60px;
-  border-top:1px solid rgba(255,255,255,0.08);
-}
+    /* MOBILE */
+    @media(max-width:1024px){
+      .course-container{
+        grid-template-columns:repeat(2,1fr);
+      }
+    }
 
-.footer-grid{
-  display:grid;
-  grid-template-columns:2fr 1fr 1fr 1fr 1fr;
-  gap:40px;
-  max-width:1200px;
-  margin:auto;
-}
+    @media(max-width:768px){
+      nav{
+        flex-direction:column;
+        align-items:center;
+      }
 
-.footer-grid h3{
-  margin-bottom:12px;
-}
+      .menu{
+        justify-content:center;
+      }
 
-.footer-grid a{
-  display:block;
-  color:var(--muted);
-  margin:8px 0;
-  text-decoration:none;
-}
+      .course-container{
+        grid-template-columns:1fr;
+      }
 
-.footer-bottom{
-  text-align:center;
-  margin-top:50px;
-  color:var(--muted);
-  font-size:13px;
-}
+      .footer-top{
+        grid-template-columns:1fr;
+        text-align:center;
+      }
 
-/* =======================
-   📱 MOBILE RESPONSIVE
-======================= */
-@media (max-width: 1024px){
-  .hero{
-    flex-direction:column;
-    text-align:center;
-  }
+      .section-title h2{
+        font-size:32px;
+      }
+    }
 
-  .hero-left h1{
-    font-size:40px;
-  }
-
-  .hero-right{
-    justify-content:center;
-  }
-
-  header{
-    flex-direction:column;
-    gap:10px;
-    padding:15px;
-  }
-
-  nav{
-    margin:0;
-    flex-wrap:wrap;
-    justify-content:center;
-  }
-}
-
-@media (max-width: 600px){
-  .hero{
-    padding:40px 20px;
-  }
-
-  .hero-left h1{
-    font-size:32px;
-  }
-
-  .courses{
-    padding:30px 20px;
-  }
-
-  .footer-grid{
-    grid-template-columns:1fr;
-    text-align:center;
-  }
-
-  .flip-card{
-    width:130px;
-    height:100px;
-  }
-}
-</style>
+  </style>
 </head>
 
 <body>
 
-<header>
-  <div class="brand">freelancer-rakib-hasan</div>
-
+  <!-- NAV -->
   <nav>
-    <a href="#">Home</a>
-    <a href="https://freelancerrakib2016.github.io/freelancerrakibhasan/" target="_blank">About</a>
-    <a href="https://www.facebook.com/rakib.hasan.415865/directory_contact_info" target="_blank">Contact</a>
-  </nav>
 
-  <div class="toggle" onclick="document.body.classList.toggle('light')">🌙 / ☀️</div>
-</header>
-
-<section class="hero">
-
-  <div class="hero-left">
-
-    <h1>Learn Creative Skills & Build Your Future</h1>
-
-    <p>Become a professional designer with Graphics & Web Design courses.</p>
-
-    <!-- START LEARNING -->
-    <a class="btn" target="_blank"
-       href="https://docs.google.com/forms/d/e/1FAIpQLSe3cVfFkmPuzcNscHaHS3913-PSBFfd9HJtechu3jusp0MyqA/viewform">
-       Start Learning
-    </a>
-
-    <div class="counter-box">
-      👨‍🎓 Live Students<br>
-      <span class="counter" id="counter">0</span>+
+    <div class="logo">
+      Freelancer-<span>Rakib-Hasan</span>
     </div>
 
-  </div>
+    <div class="menu">
+      <a href="#">Home</a>
 
-  <div class="hero-right">
-    <div class="flip-card"><div class="flip-inner"><div class="flip-front">💳 bKash</div><div class="flip-back">Instant Payment</div></div></div>
-    <div class="flip-card"><div class="flip-inner"><div class="flip-front">💰 Nagad</div><div class="flip-back">Fast Banking</div></div></div>
-    <div class="flip-card"><div class="flip-inner"><div class="flip-front">👤 Personal</div><div class="flip-back">Send Money</div></div></div>
-    <div class="flip-card"><div class="flip-inner"><div class="flip-front">🏧 Cash Out</div><div class="flip-back">Withdraw Anytime</div></div></div>
-  </div>
+      <!-- MAIN PAGES (UPDATED) -->
+      <a href="https://freelancerrakib2016.github.io/Graphics-Design--home-pages/?fbclid=IwY2xjawSPURJleHRuA2FlbQIxMABzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEemrg3gR4SWnS70mGOlo_skMa5wu1kxDijLacI5M2YQdnh_sKMTeYhajMT1HU_aem_jin92oy3XyCb8oIQl6qX7g"
+         target="_blank">
+        Main Pages
+      </a>
 
-</section>
+      <a href="https://www.facebook.com/profile.php?id=61589180354803" target="_blank">
+        Contact
+      </a>
+    </div>
 
-<!-- COURSES (ALL CLICK → FORM) -->
-<section class="courses">
+  </nav>
 
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSe3cVfFkmPuzcNscHaHS3913-PSBFfd9HJtechu3jusp0MyqA/viewform" target="_blank" style="text-decoration:none;color:inherit;">
-  <div class="card">
-    <span class="badge">Popular</span>
-    <h2>Graphics Design</h2>
-    <p>Photoshop, Illustrator, Branding</p>
-    <div class="price">৳500</div>
-  </div>
-</a>
+  <!-- COURSES -->
+  <section class="courses">
 
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSe3cVfFkmPuzcNscHaHS3913-PSBFfd9HJtechu3jusp0MyqA/viewform" target="_blank" style="text-decoration:none;color:inherit;">
-  <div class="card">
-    <span class="badge">Trending</span>
-    <h2>Web Design</h2>
-    <p>HTML, CSS, UI/UX</p>
-    <div class="price">৳500</div>
-  </div>
-</a>
+    <div class="section-title">
+      <h2>Our Premium Courses</h2>
+      <p>Choose your favorite graphics design course and start learning professionally.</p>
+    </div>
 
-</section>
+    <div class="course-container">
 
-<footer>
+      <div class="course-box">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968472.png">
+        <h3>Adobe Illustrator</h3>
+        <p>Learn vector design and branding professionally.</p>
+        <a href="#">Start Course</a>
+      </div>
 
-<div class="footer-grid">
+      <div class="course-box">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968520.png">
+        <h3>Adobe Photoshop</h3>
+        <p>Learn professional photo editing and retouching.</p>
+        <a href="#">Start Course</a>
+      </div>
 
-  <div>
-    <h3>About Platform</h3>
-    <p style="color:var(--muted);text-align:justify;line-height:1.6;">
-      Professional learning platform for Graphics Design & Web Development. Built for freelancers and beginners to grow skills fast.
-    </p>
-  </div>
+      <div class="course-box">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+        <h3>Logo Design</h3>
+        <p>Learn modern logo and branding techniques.</p>
+        <a href="#">Start Course</a>
+      </div>
 
-  <div>
-    <h3>Courses</h3>
-    <a href="#">Graphics Design</a>
-    <a href="#">Web Design</a>
-  </div>
+      <div class="course-box">
+        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png">
+        <h3>Typography</h3>
+        <p>Creative typography and font pairing course.</p>
+        <a href="#">Start Course</a>
+      </div>
 
-  <div>
-    <h3>Support</h3>
-    <a href="#">Help Center</a>
-    <a href="#">Contact</a>
-  </div>
+      <div class="course-box">
+        <img src="https://cdn-icons-png.flaticon.com/512/2920/2920277.png">
+        <h3>Flyer Design</h3>
+        <p>Professional flyer and marketing design.</p>
+        <a href="#">Start Course</a>
+      </div>
 
-  <div>
-    <h3>Company</h3>
-    <a href="#">About</a>
-    <a href="#">Privacy</a>
-  </div>
+      <div class="course-box">
+        <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png">
+        <h3>Banner Design</h3>
+        <p>Learn social media banner design.</p>
+        <a href="#">Start Course</a>
+      </div>
 
-  <div>
-    <h3>Social</h3>
-    <a href="https://facebook.com" target="_blank">Facebook</a>
-    <a href="https://github.com" target="_blank">GitHub</a>
-    <a href="https://youtube.com" target="_blank">YouTube</a>
-  </div>
+      <div class="course-box">
+        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png">
+        <h3>YouTube Thumbnail</h3>
+        <p>Create eye-catching thumbnails.</p>
+        <a href="#">Start Course</a>
+      </div>
 
-</div>
+      <div class="course-box">
+        <img src="https://cdn-icons-png.flaticon.com/512/3050/3050525.png">
+        <h3>Business Card Design</h3>
+        <p>Learn premium business card design techniques.</p>
+        <a href="#">Start Course</a>
+      </div>
 
-<div class="footer-bottom">
-  © 2026 freelancer-rakib-hasan | All Rights Reserved
-</div>
+    </div>
 
-</footer>
+  </section>
 
-<script>
-let count = 0;
-let target = 1280;
+  <!-- FOOTER -->
+  <footer>
 
-let speed = setInterval(()=>{
-  count += 10;
-  document.getElementById("counter").innerText = count;
+    <div class="footer-top">
 
-  if(count >= target){
-    document.getElementById("counter").innerText = target;
-    clearInterval(speed);
-  }
-}, 20);
-</script>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Courses</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h3>Courses</h3>
+        <ul>
+          <li><a href="#">Illustrator</a></li>
+          <li><a href="#">Photoshop</a></li>
+          <li><a href="#">Logo Design</a></li>
+          <li><a href="#">Freelancing</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h3>Contact Info</h3>
+        <p>Email: freelancerrakib@gmail.com</p>
+        <p>Location: Saudi Arabia</p>
+        <p>Available for Freelance Work</p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>Thanks For Visiting ❤️</p>
+    </div>
+
+  </footer>
 
 </body>
 </html>
