@@ -8,7 +8,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
-
     *{
       margin:0;
       padding:0;
@@ -21,7 +20,6 @@
       overflow-x:hidden;
     }
 
-    /* NAV */
     nav{
       width:100%;
       background:#0f172a;
@@ -55,14 +53,12 @@
       text-decoration:none;
       color:#fff;
       font-size:15px;
-      transition:0.3s;
     }
 
     .menu a:hover{
       color:#38bdf8;
     }
 
-    /* SECTION */
     .courses{
       padding:90px 5%;
     }
@@ -82,7 +78,6 @@
       color:#64748b;
     }
 
-    /* GRID */
     .course-container{
       display:grid;
       grid-template-columns:repeat(3,1fr);
@@ -145,7 +140,6 @@
       background:#38bdf8;
     }
 
-    /* FOOTER */
     footer{
       background:#020617;
       color:#fff;
@@ -157,11 +151,6 @@
       display:grid;
       grid-template-columns:1fr 1fr 1fr;
       gap:30px;
-    }
-
-    .footer-links h3,
-    .footer-contact h3{
-      margin-bottom:15px;
     }
 
     .footer-links ul{
@@ -177,11 +166,6 @@
       color:#38bdf8;
     }
 
-    .footer-contact p{
-      color:#94a3b8;
-      margin-bottom:8px;
-    }
-
     .footer-bottom{
       text-align:center;
       margin-top:20px;
@@ -190,7 +174,6 @@
       color:#64748b;
     }
 
-    /* MOBILE */
     @media(max-width:1024px){
       .course-container{
         grid-template-columns:repeat(2,1fr);
@@ -198,174 +181,118 @@
     }
 
     @media(max-width:768px){
-      nav{
-        flex-direction:column;
-        align-items:center;
-      }
-
-      .menu{
-        justify-content:center;
-      }
-
       .course-container{
         grid-template-columns:1fr;
       }
-
-      .footer-top{
-        grid-template-columns:1fr;
-        text-align:center;
-      }
-
-      .section-title h2{
-        font-size:32px;
-      }
     }
-
   </style>
 </head>
 
 <body>
 
-  <!-- NAV -->
-  <nav>
+<nav>
+  <div class="logo">Freelancer-<span>Rakib-Hasan</span></div>
+  <div class="menu">
+    <a href="#">Home</a>
+    <a href="https://freelancerrakib2016.github.io/graphcs-web-design-course/#" target="_blank">Main Pages</a>
+    <a href="https://www.facebook.com/profile.php?id=61589180354803" target="_blank">Contact</a>
+  </div>
+</nav>
 
-    <div class="logo">
-      Freelancer-<span>Rakib-Hasan</span>
+<section class="courses">
+
+  <div class="section-title">
+    <h2>Our Premium Courses</h2>
+    <p>Choose your favorite graphics design course and start learning professionally.</p>
+  </div>
+
+  <div class="course-container">
+
+    <div class="course-box">
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968472.png">
+      <h3>Adobe Illustrator</h3>
+      <p>Learn vector design and branding professionally.</p>
+      <a href="https://freelancerrakib2016.github.io/Graphics-Design--Adobe-illustrator-course/" target="_blank">Start Course</a>
     </div>
 
-    <div class="menu">
-      <a href="#">Home</a>
-
-      <a href="https://freelancerrakib2016.github.io/graphcs-web-design-course/#" target="_blank">
-        Main Pages
-      </a>
-
-      <a href="https://www.facebook.com/profile.php?id=61589180354803" target="_blank">
-        Contact
-      </a>
+    <div class="course-box">
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968520.png">
+      <h3>Adobe Photoshop</h3>
+      <p>Learn professional photo editing and retouching.</p>
+      <a href="https://freelancerrakib2016.github.io/Adobe-photoshop-course/" target="_blank">Start Course</a>
     </div>
 
-  </nav>
-
-  <!-- COURSES -->
-  <section class="courses">
-
-    <div class="section-title">
-      <h2>Our Premium Courses</h2>
-      <p>Choose your favorite graphics design course and start learning professionally.</p>
+    <div class="course-box">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+      <h3>Logo Design</h3>
+      <p>Learn modern logo and branding techniques.</p>
+      <a href="https://freelancerrakib2016.github.io/logo-design-course-/" target="_blank">Start Course</a>
     </div>
 
-    <div class="course-container">
-
-      <div class="course-box">
-        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968472.png">
-        <h3>Adobe Illustrator</h3>
-        <p>Learn vector design and branding professionally.</p>
-        <a href="#">Start Course</a>
-      </div>
-
-      <div class="course-box">
-        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968520.png">
-        <h3>Adobe Photoshop</h3>
-        <p>Learn professional photo editing and retouching.</p>
-        <a href="#">Start Course</a>
-      </div>
-
-      <div class="course-box">
-        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
-        <h3>Logo Design</h3>
-        <p>Learn modern logo and branding techniques.</p>
-        <a href="#">Start Course</a>
-      </div>
-
-      <div class="course-box">
-        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png">
-        <h3>Typography</h3>
-        <p>Creative typography and font pairing course.</p>
-        <a href="#">Start Course</a>
-      </div>
-
-      <div class="course-box">
-        <img src="https://cdn-icons-png.flaticon.com/512/2920/2920277.png">
-        <h3>Flyer Design</h3>
-        <p>Professional flyer and marketing design.</p>
-        <a href="#">Start Course</a>
-      </div>
-
-      <div class="course-box">
-        <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png">
-        <h3>Banner Design</h3>
-        <p>Learn social media banner design.</p>
-        <a href="#">Start Course</a>
-      </div>
-
-      <div class="course-box">
-        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png">
-        <h3>YouTube Thumbnail</h3>
-        <p>Create eye-catching thumbnails.</p>
-        <a href="#">Start Course</a>
-      </div>
-
-      <!-- NEW BOX ADDED -->
-      <div class="course-box">
-        <img src="https://cdn-icons-png.flaticon.com/512/3163/3163458.png">
-        <h3>Color Theory</h3>
-        <p>Learn color psychology and harmony in design.</p>
-        <a href="https://freelancerrakib2016.github.io/colorpages-/" target="_blank">
-          Start Course
-        </a>
-      </div>
-
-      <div class="course-box">
-        <img src="https://cdn-icons-png.flaticon.com/512/3050/3050525.png">
-        <h3>Business Card Design</h3>
-        <p>Learn premium business card design techniques.</p>
-        <a href="#">Start Course</a>
-      </div>
-
+    <div class="course-box">
+      <img src="https://cdn-icons-png.flaticon.com/512/2920/2920277.png">
+      <h3>Flyer Design</h3>
+      <p>Professional flyer and marketing design.</p>
+      <a href="https://freelancerrakib2016.github.io/flyer-design-course/" target="_blank">Start Course</a>
     </div>
 
-  </section>
+    <div class="course-box">
+      <img src="https://cdn-icons-png.flaticon.com/512/3163/3163458.png">
+      <h3>Color Theory</h3>
+      <p>Learn color psychology and harmony in design.</p>
+      <a href="https://freelancerrakib2016.github.io/colorpages-/" target="_blank">Start Course</a>
+    </div>
+<!-- Typography Basic Course -->
+<div class="course-box">
+  <img src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png">
+  <h3>Typography Basic</h3>
+  <p>Learn typography fundamentals, font pairing and text hierarchy.</p>
+  <a href="#" target="_blank">
+    Start Course
+  </a>
+</div>
 
-  <!-- FOOTER -->
-  <footer>
+<!-- Business Card Design Course -->
+<div class="course-box">
+  <img src="https://cdn-icons-png.flaticon.com/512/3050/3050525.png">
+  <h3>Business Card Design</h3>
+  <p>Create professional and premium business card designs.</p>
+  <a href="#" target="_blank">
+    Start Course
+  </a>
+</div>
+  </div>
+</section>
 
-    <div class="footer-top">
-
-      <div class="footer-links">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Courses</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Contact Us</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-links">
-        <h3>Courses</h3>
-        <ul>
-          <li><a href="#">Illustrator</a></li>
-          <li><a href="#">Photoshop</a></li>
-          <li><a href="#">Logo Design</a></li>
-          <li><a href="#">Freelancing</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-contact">
-        <h3>Contact Info</h3>
-        <p>Email: freelancerrakib@gmail.com</p>
-        <p>Location: Saudi Arabia</p>
-        <p>Available for Freelance Work</p>
-      </div>
-
+<footer>
+  <div class="footer-top">
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Courses</a></li>
+      </ul>
     </div>
 
-    <div class="footer-bottom">
-      <p>Thanks For Visiting ❤️</p>
+    <div class="footer-links">
+      <h3>Courses</h3>
+      <ul>
+        <li><a href="#">Illustrator</a></li>
+        <li><a href="#">Photoshop</a></li>
+      </ul>
     </div>
 
-  </footer>
+    <div class="footer-contact">
+      <h3>Contact Info</h3>
+      <p>Email: freelancerrakib@gmail.com</p>
+      <p>Location: Saudi Arabia</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Thanks For Visiting ❤️</p>
+  </div>
+</footer>
 
 </body>
 </html>
